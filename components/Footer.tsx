@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-10 border-t border-zinc-100 pt-6 text-xs text-zinc-400">
-          &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
+          &copy; {new Date().getFullYear()} Developed by BytePeak, a sub of PeakNomad. All rights reserved.
         </p>
       </div>
     </footer>
