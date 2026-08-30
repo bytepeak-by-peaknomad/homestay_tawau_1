@@ -99,6 +99,55 @@ export async function submitReview(
   return { ok: true };
 }
 
+export interface ReviewStats {
+  average: number;
+  count: number;
+}
+
+interface StatsRow {
+  average: number | string;
+  count: number | string;
+}
+
+export async function getReviewStats(homestayId: string): Promise<ReviewStats> {
+  await ensureSchema();
+  const s = getSql();
+  const rows = (await s`
+    SELECT COALESCE(AVG(rating), 0) AS average, COUNT(*) AS count
+    FROM reviews
+    WHERE homestay_id = ${homestayId}
+  `) as StatsRow[];
+
+  const row = rows[0];
+  return {
+    average: Number(row?.average ?? 0),
+    count: Number(row?.count ?? 0),
+  };
+}
+
+interface AllStatsRow extends StatsRow {
+  homestay_id: string;
+}
+
+export async function getAllReviewStats(): Promise<Record<string, ReviewStats>> {
+  await ensureSchema();
+  const s = getSql();
+  const rows = (await s`
+    SELECT homestay_id, AVG(rating) AS average, COUNT(*) AS count
+    FROM reviews
+    GROUP BY homestay_id
+  `) as AllStatsRow[];
+
+  const stats: Record<string, ReviewStats> = {};
+  for (const row of rows) {
+    stats[row.homestay_id] = {
+      average: Number(row.average),
+      count: Number(row.count),
+    };
+  }
+  return stats;
+}
+
 interface ReviewRow {
   id: string;
   homestay_id: string;

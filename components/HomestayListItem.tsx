@@ -97,10 +97,14 @@ export default function HomestayListItem({ homestay }: { homestay: Homestay }) {
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center gap-1 rounded-md bg-orange-100 px-1.5 py-0.5 text-sm font-semibold text-orange-700">
             <StarIcon className="h-3.5 w-3.5" />
-            {homestay.rating.toFixed(1)}
+            {homestay.reviews === 0 ? "0" : homestay.rating.toFixed(1)}
           </span>
           <span className="text-sm text-zinc-600">
-            {ratingLabel(homestay.rating)} &middot; {homestay.reviews} reviews
+            {homestay.reviews === 0
+              ? "No reviews yet"
+              : `${ratingLabel(homestay.rating)} · ${homestay.reviews} ${
+                  homestay.reviews === 1 ? "review" : "reviews"
+                }`}
           </span>
         </div>
 

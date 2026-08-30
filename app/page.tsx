@@ -1,8 +1,17 @@
+import { connection } from "next/server";
 import HomestayList from "@/components/HomestayList";
 import { getHomestays } from "@/lib/homestays";
+import { getAllReviewStats } from "@/lib/reviews";
 
-export default function Home() {
+export default async function Home() {
+  await connection();
   const homestays = getHomestays();
+  const stats = await getAllReviewStats();
+
+  const withReviews = homestays.map((homestay) => {
+    const s = stats[homestay.id] ?? { average: 0, count: 0 };
+    return { ...homestay, rating: s.average, reviews: s.count };
+  });
 
   return (
     <div>
@@ -25,7 +34,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6">
-        <HomestayList homestays={homestays} />
+        <HomestayList homestays={withReviews} />
       </section>
     </div>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import ImageGallery from "@/components/ImageGallery";
 import Reviews from "@/components/Reviews";
 import {
@@ -12,6 +13,7 @@ import {
 } from "@/components/icons";
 import { formatPrice, ratingLabel, waLink } from "@/lib/constants";
 import { getHomestays } from "@/lib/homestays";
+import { getReviewStats } from "@/lib/reviews";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -35,6 +37,11 @@ export default async function HomestayDetailPage({ params }: Props) {
   const { id } = await params;
   const homestay = getHomestays().find((h) => h.id === id);
   if (!homestay) notFound();
+
+  await connection();
+  const stats = await getReviewStats(id);
+  const rating = stats.count === 0 ? 0 : stats.average;
+  const reviewCount = stats.count;
 
   const facts = [
     { label: "Guests", value: homestay.maxGuests },
@@ -63,10 +70,14 @@ export default async function HomestayDetailPage({ params }: Props) {
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           <span className="inline-flex items-center gap-1 rounded-md bg-orange-100 px-2 py-0.5 font-semibold text-orange-700">
             <StarIcon className="h-4 w-4" />
-            {homestay.rating.toFixed(1)}
+            {reviewCount === 0 ? "0" : rating.toFixed(1)}
           </span>
           <span className="text-zinc-600">
-            {ratingLabel(homestay.rating)} &middot; {homestay.reviews} reviews
+            {reviewCount === 0
+              ? "No reviews yet"
+              : `${ratingLabel(rating)} · ${reviewCount} ${
+                  reviewCount === 1 ? "review" : "reviews"
+                }`}
           </span>
           <span className="flex items-center gap-1.5 text-zinc-500">
             <PinIcon className="h-4 w-4 text-zinc-400" />
