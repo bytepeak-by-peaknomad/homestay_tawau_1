@@ -1,0 +1,128 @@
+[
+  {
+    "id": "hs-t01",
+    "name": "Rumah Kampung Tawau Homestay",
+    "address": "Lot 12, Jalan Apas, 91000 Tawau, Sabah",
+    "area": "Apas",
+    "price": 160,
+    "description": "A traditional kampung house in the heart of Apas, renovated with modern comforts while keeping its rustic charm. Wake up to birdsong in the garden, enjoy home-cooked local breakfast, and explore the nearby Apas markets on foot. Perfect for families who want an authentic Tawau experience.",
+    "images": [
+      "https://picsum.photos/seed/tawau01-a/1200/800",
+      "https://picsum.photos/seed/tawau01-b/1200/800",
+      "https://picsum.photos/seed/tawau01-c/1200/800",
+      "https://picsum.photos/seed/tawau01-d/1200/800"
+    ],
+    "rating": 4.8,
+    "reviews": 87,
+    "amenities": ["Free WiFi", "Air Conditioning", "Free Parking", "Breakfast", "Garden", "Hot Shower", "Kitchen", "Washing Machine"],
+    "maxGuests": 6,
+    "bedrooms": 3,
+    "beds": 4,
+    "bathrooms": 2
+  },
+  {
+    "id": "hs-t02",
+    "name": "Sinsuran Townhouse Stay",
+    "address": "No. 23, Jalan Sinsuran, 91000 Tawau, Sabah",
+    "area": "Town Centre",
+    "price": 150,
+    "description": "A bright, modern townhouse right in Tawau town centre. Walk to the waterfront, local seafood restaurants, and night markets within minutes. Ideal for travellers who want convenience without giving up space and comfort.",
+    "images": [
+      "https://picsum.photos/seed/tawau02-a/1200/800",
+      "https://picsum.photos/seed/tawau02-b/1200/800",
+      "https://picsum.photos/seed/tawau02-c/1200/800",
+      "https://picsum.photos/seed/tawau02-d/1200/800"
+    ],
+    "rating": 4.6,
+    "reviews": 64,
+    "amenities": ["Free WiFi", "Air Conditioning", "Smart TV", "Kitchen", "Hot Shower", "Free Parking", "Washing Machine", "Security"],
+    "maxGuests": 4,
+    "bedrooms": 2,
+    "beds": 2,
+    "bathrooms": 2
+  },
+  {
+    "id": "hs-t03",
+    "name": "Kuhara Garden Homestay",
+    "address": "Lot 5, Jalan Kuhara, 91000 Tawau, Sabah",
+    "area": "Kuhara",
+    "price": 140,
+    "description": "A cosy family homestay surrounded by a lush garden in the quiet Kuhara neighbourhood. A popular base for those heading to the caves and plantations, with a shared BBQ corner and plenty of space for kids to run around.",
+    "images": [
+      "https://picsum.photos/seed/tawau03-a/1200/800",
+      "https://picsum.photos/seed/tawau03-b/1200/800",
+      "https://picsum.photos/seed/tawau03-c/1200/800",
+      "https://picsum.photos/seed/tawau03-d/1200/800"
+    ],
+    "rating": 4.7,
+    "reviews": 102,
+    "amenities": ["Free WiFi", "Air Conditioning", "Free Parking", "Garden", "BBQ Grill", "Hot Shower", "Breakfast", "Security"],
+    "maxGuests": 5,
+    "bedrooms": 3,
+    "beds": 3,
+    "bathrooms": 2
+  },
+  {
+    "id": "hs-t04",
+    "name": "Takada Riverside Homestay",
+    "address": "Kampung Takada, Jalan Takada, 91000 Tawau, Sabah",
+    "area": "Takada",
+    "price": 210,
+    "description": "Set along a quiet stretch of river on the outskirts of Tawau, this homestay offers calm mornings, cool breezes, and a covered veranda made for coffee and conversation. Boat trips and jungle walks can be arranged by the owner.",
+    "images": [
+      "https://picsum.photos/seed/tawau04-a/1200/800",
+      "https://picsum.photos/seed/tawau04-b/1200/800",
+      "https://picsum.photos/seed/tawau04-c/1200/800",
+      "https://picsum.photos/seed/tawau04-d/1200/800"
+    ],
+    "rating": 4.9,
+    "reviews": 55,
+    "amenities": ["Free WiFi", "River View", "Air Conditioning", "Breakfast", "Free Parking", "Hot Shower", "BBQ Grill", "Garden"],
+    "maxGuests": 6,
+    "bedrooms": 3,
+    "beds": 4,
+    "bathrooms": 2
+  },
+  {
+    "id": "hs-t05",
+    "name": "Merotai Village Retreat",
+    "address": "Kampung Merotai Besar, 91000 Tawau, Sabah",
+    "area": "Merotai",
+    "price": 175,
+    "description": "A laid-back village homestay surrounded by oil palm and fruit orchards. Guests are welcomed like family, with guided walks, seasonal fruit tasting, and a rustic outdoor kitchen. A genuine slice of Sabahan village life.",
+    "images": [
+      "https://picsum.photos/seed/tawau05-a/1200/800",
+      "https://picsum.photos/seed/tawau05-b/1200/800",
+      "https://picsum.photos/seed/tawau05-c/1200/800",
+      "https://picsum.photos/seed/tawau05-d/1200/800"
+    ],
+    "rating": 4.5,
+    "reviews": 39,
+    "amenities": ["Free WiFi", "Breakfast", "Garden", "Hot Shower", "Free Parking", "Kitchen", "Air Conditioning"],
+    "maxGuests": 4,
+    "bedrooms": 2,
+    "beds": 3,
+    "bathrooms": 1
+  },
+  {
+    "id": "hs-t06",
+    "name": "Balung River View Homestay",
+    "address": "Jalan Balung, Batu 10, 91000 Tawau, Sabah",
+    "area": "Balung",
+    "price": 195,
+    "description": "A peaceful riverside homestay at the edge of the Balung river valley, about 20 minutes from town. Wake up to mist over the water, enjoy the open-air dining deck, and cool off with an evening swim nearby.",
+    "images": [
+      "https://picsum.photos/seed/tawau06-a/1200/800",
+      "https://picsum.photos/seed/tawau06-b/1200/800",
+      "https://picsum.photos/seed/tawau06-c/1200/800",
+      "https://picsum.photos/seed/tawau06-d/1200/800"
+    ],
+    "rating": 4.8,
+    "reviews": 71,
+    "amenities": ["Free WiFi", "River View", "Air Conditioning", "Free Parking", "Hot Shower", "BBQ Grill", "Breakfast", "Kitchen"],
+    "maxGuests": 5,
+    "bedrooms": 3,
+    "beds": 3,
+    "bathrooms": 2
+  }
+]
