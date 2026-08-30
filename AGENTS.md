@@ -41,7 +41,7 @@ Next.js 16 (App Router, TypeScript, Turbopack) + Tailwind v4. Server-rendered, V
 - `components/HomestayList.tsx` (client) — search + sort over the homestays.
 - `components/HomestayListItem.tsx` (client) — Traveloka-style row card with inline photo gallery; name/`View Details` open the detail page in a new tab (`target="_blank"`).
 - `components/ImageGallery.tsx` (client) — big image + scrollable thumbnail strip on the detail page.
-- `app/homestays/[id]/page.tsx` — static detail page (`generateStaticParams`), `notFound()` for bad ids.
+- `app/homestays/[/id]/page.tsx` — static detail page (`generateStaticParams`), `notFound()` for bad ids.
 - `components/Header.tsx` / `Footer.tsx` — shared chrome, site name `Tawau Homestay`.
 - `components/icons.tsx` — small inline SVG icon set (no icon library).
 - `app/layout.tsx` — root layout + site metadata.

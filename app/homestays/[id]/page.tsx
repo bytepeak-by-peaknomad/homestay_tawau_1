@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ImageGallery from "@/components/ImageGallery";
+import Reviews from "@/components/Reviews";
 import {
   CheckIcon,
   ChevronLeftIcon,
@@ -119,6 +120,8 @@ export default async function HomestayDetailPage({ params }: Props) {
               ))}
             </ul>
           </section>
+
+          <Reviews homestayId={homestay.id} />
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
