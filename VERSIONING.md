@@ -15,6 +15,8 @@ Every change we make is saved as a **commit** — a numbered version you can go 
    ```
    git add -A
    git commit -m "describe the change"
+
+   git push  #if want to push to main already
    ```
 3. Repeat. Each commit is a new version.
 
